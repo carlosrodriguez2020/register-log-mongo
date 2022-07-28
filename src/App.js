@@ -3,6 +3,8 @@ import Contact from "./components/Contact";
 import Home from "./components/Home";
 import MNavbar from "./layout/MNavbar";
 import Detail from "./components/Detail";
+import Register from "./components/Register";
+import Login from "./components/Login";
 import "./App.css";
 
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
@@ -18,6 +20,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Route>
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/detail" element={<Detail />} />
           <Route path="*" element={<Navigate replace to="/" />} />
         </Routes>
