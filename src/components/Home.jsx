@@ -6,6 +6,11 @@ import CardUsers from "./CardUsers";
 const axios = require("axios");
 
 const Home = () => {
+  const handelClick = async () => {
+    const req = await fetch("http://localhost:8000/");
+    const res = await req.json();
+    console.log(res);
+  };
   const [apiResponse, setApiResponse] = useState({});
   const obtenerPersonajes = async () => {
     const apiRickyMorti = "https://rickandmortyapi.com/api/character/?page=2";
@@ -17,6 +22,7 @@ const Home = () => {
   }, []);
   return (
     <section className="container">
+      <button onClick={handelClick}>Contact-Backend</button>
       <h3>Axios method</h3>
       <article className="row">
         {apiResponse.length > 0 &&
